@@ -1,0 +1,25 @@
+{
+    "name": "Controle Expenses",
+    "description": "Sistema de controle de despesas.",
+    "authors": [
+        {
+            "name": "Samuel Xavier",
+            "email": "sancrisxa@gmail.com"
+        }
+    ],
+    "autoload" : {
+
+        "psr-4" : {
+
+            "Code\\Usuario\\" : "src/code/usuario",
+            "Code\\Conta\\" : "src/code/conta",
+            "Code\\Conexao\\" : "src/code/conexao",
+            "Code\\UsuarioTest\\" : "tests/code/conta"
+          
+
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7"
+    }
+}
