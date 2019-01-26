@@ -11,9 +11,11 @@
 
         "psr-4" : {
 
-            "Code\\Usuario\\" : "src/code/usuario",
+            "Code\\User\\" : "src/code/user",
             "Code\\Conta\\" : "src/code/conta",
-            "Code\\Conexao\\" : "src/code/conexao",
+            "Code\\Connection\\" : "src/code/connection",
+            "Code\\Permission\\" : "src/code/permission",
+            "Code\\Profile\\" : "src/code/profile",
             "Code\\UsuarioTest\\" : "tests/code/conta"
           
 
