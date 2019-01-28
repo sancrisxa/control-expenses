@@ -16,6 +16,20 @@ class UserDao
         $result = $this->connection->executeQuery($selectSql);
         return $result;
     }
+
+    public function getUserByEmail($email)
+    {
+        $selectSql = "SELECT * FROM `users` WHERE UserEmail = '{$email}'";
+
+        var_dump($selectSql);
+        $result = $this->connection->executeQuery($selectSql);
+
+      
+
+        return $result;
+    }
+
+
    
 }
 

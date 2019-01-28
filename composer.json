@@ -16,6 +16,7 @@
             "Code\\Connection\\" : "src/code/connection",
             "Code\\Permission\\" : "src/code/permission",
             "Code\\Profile\\" : "src/code/profile",
+            "Code\\Service\\" : "src/code/service",
             "Code\\UsuarioTest\\" : "tests/code/conta"
           
 

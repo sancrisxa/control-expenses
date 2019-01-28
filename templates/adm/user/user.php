@@ -21,23 +21,28 @@ $result = $userDao->selectUsers();
 </head>
 <body>
     <h2>Usuarios</h2>
-    <?php if ($result->num_rows > 0): ?>
-
-        <ul>
+    <table>
+        <tr>
+            <th>Nº</th>
+            <th>Login</th>
+            <th>Name</th>
+            <th>Email</th>
+        </tr>
+        <?php if ($result->num_rows > 0): ?>
+        <?php $n = 0;?>
             <?php while($row = $result->fetch_assoc()): ?>
+                <tr>   
+                    <td><?php echo ++$n;?></td>
+                    <td><?php echo $row["UserLogin"];?></td>
+                    <td><?php echo $row["UserLogin"] . " " .$row["UserLastName"];?></td>
+                    <td><?php echo $row["UserEmail"];?></td>
+                </tr>
+            <?php endwhile;?>     
+    </table>
+        <?php else:?>
+            
+            <p><?php echo "0 results";?></p>
 
-                <li>
-                    <?php echo "id: " . $row["UserID"]. " - Login: " . $row["UserLogin"] . " - Name: " . $row["UserName"]. " " . $row["UserLastName"]. " - E-mail: " . $row["UserEmail"]. "<br>";?>
-                </li>
-
-            <?php endwhile;?>
-        </ul>
-    <?php else:?>
-
-        <p><?php echo "0 results";?></p>
-
-    <?php endif;?>
- 
-    
+        <?php endif;?>   
 </body>
 </html>
